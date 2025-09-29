@@ -1,0 +1,267 @@
+/* ======================== */
+/* Container */
+.container {
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem; /* professional side spacing */
+  font-family: "Poppins", sans-serif;
+  background: #0f1114;
+  color: #fff;
+}
+
+/* ======================== */
+/* Headings */
+.title {
+  text-align: center;
+  font-size: clamp(2rem, 5vw, 2.7rem);
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+  color: #facc15;
+  letter-spacing: 1px;
+}
+
+.subtitle {
+  text-align: center;
+  font-size: clamp(0.95rem, 2vw, 1.1rem);
+  color: #aaa;
+  margin: 0 auto 2rem;
+  max-width: 700px;
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+/* ======================== */
+/* Search */
+.searchContainer {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.searchInput {
+  padding: 0.5rem 1rem;
+  width: 100%;
+  max-width: 280px;
+  border-radius: 10px;
+  border: 1px solid #333;
+  background: #1a1a1a;
+  color: #fff;
+  font-size: 0.95rem;
+  font-weight: 400;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.searchInput:focus {
+  outline: none;
+  border-color: #facc15;
+  box-shadow: 0 0 8px rgba(250, 204, 21, 0.5);
+}
+
+.searchInput::placeholder {
+  color: #888;
+}
+
+/* ======================== */
+/* Filter Buttons */
+.filter {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.filterBtn {
+  background: #1a1a1a;
+  color: #ccc;
+  border: 1px solid #444;
+  padding: 0.5rem 1rem;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.filterBtn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(250, 204, 21, 0.4);
+}
+
+/* ======================== */
+/* Grid */
+.grid {
+  display: grid;
+  gap: clamp(1rem, 2vw, 2rem);
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  justify-items: center; /* center cards horizontally */
+  padding: 0; /* container handles spacing */
+}
+
+/* ======================== */
+/* Card Wrapper */
+.cardWrapper {
+  width: 150px; /* fixed width */
+  height: 150px; /* fixed height */
+}
+
+/* ======================== */
+/* Card */
+.card {
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem;
+  border: 1px solid #222;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  padding: 0.5rem;
+  text-align: center;
+}
+
+.card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.15);
+  opacity: 0;
+  border-radius: 1rem;
+  transition: opacity 0.3s ease;
+}
+
+.card:hover::after {
+  opacity: 1;
+}
+
+.card:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.5);
+}
+
+/* Card Text */
+.code {
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.name {
+  font-size: 0.85rem;
+  font-weight: 500;
+  line-height: 1.3;
+}
+
+.highlight {
+  background-color: rgba(255, 255, 0, 0.6);
+  border-radius: 3px;
+  padding: 0 2px;
+}
+
+/* ======================== */
+/* Pagination */
+.pagination {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+}
+
+.pageBtn {
+  background: #1a1a1a;
+  color: #ccc;
+  border: 1px solid #444;
+  padding: 0.4rem 0.8rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.pageBtn:hover,
+.activePage {
+  background: #facc15;
+  color: #111;
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(250, 204, 21, 0.25);
+}
+
+/* ======================== */
+/* No Results */
+.noResults {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ff6b6b;
+  background-color: rgba(255,255,255,0.05);
+  padding: 2rem 1rem;
+  border-radius: 12px;
+  margin: 1.5rem auto;
+  max-width: 350px;
+  min-height: 150px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ======================== */
+/* Responsive */
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  }
+  .cardWrapper {
+    width: 130px;
+    height: 130px;
+  }
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+  }
+  .cardWrapper {
+    width: 110px;
+    height: 110px;
+  }
+  .searchInput {
+    max-width: 180px;
+  }
+}
+
+@media (max-width: 480px) {
+  .grid {
+    grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+  }
+  .cardWrapper {
+    width: 90px;
+    height: 90px;
+  }
+  .title {
+    font-size: 1.8rem;
+  }
+  .subtitle {
+    font-size: 0.85rem;
+  }
+  .filterBtn {
+    padding: 0.3rem 0.6rem;
+    font-size: 0.8rem;
+  }
+  .code {
+    font-size: 0.75rem;
+  }
+  .name {
+    font-size: 0.7rem;
+  }
+}

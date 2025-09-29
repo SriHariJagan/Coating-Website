@@ -1,0 +1,297 @@
+.home {
+  font-family: "Poppins", sans-serif;
+  background: #0f1114;
+  color: #fff;
+  line-height: 1.7;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* --- Hero Section --- */
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  margin: 3rem auto;
+  margin-bottom: 1rem;
+  border-radius: 1rem;
+  background: linear-gradient(135deg, #1a1a1a, #111);
+  overflow: hidden;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.55);
+}
+
+.heroContent {
+  flex: 1;
+  min-width: 280px;
+  padding: 3rem 2rem;
+}
+
+.heroContent h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 700;
+  line-height: 1.2;
+  color: #facc15;
+  margin-bottom: 1rem;
+}
+
+.heroContent p {
+  margin: 1.5rem 0 2.5rem;
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+  color: #cbd5e1;
+  max-width: 550px;
+}
+
+.ctaBtn {
+  background: #facc15;
+  border: none;
+  padding: 0.9rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  color: #111;
+  transition: all 0.3s ease;
+}
+
+.ctaBtn:hover {
+  background: #ffd633;
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(250, 204, 21, 0.6);
+}
+
+.heroImage {
+  flex: 1;
+  min-width: 280px;
+  aspect-ratio: 4 / 3;
+  background: url("https://wallpapercave.com/wp/wp13427311.png") center/cover no-repeat;
+  border-left: 1px solid #222;
+}
+
+/* --- Services Section --- */
+.services {
+  background: #0f1114;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.services h2 {
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  font-weight: 700;
+  margin-bottom: 2.5rem;
+  color: #facc15;
+}
+
+.servicesGrid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+  .servicesGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.serviceCard {
+  background: #1a1a1a;
+  border: 1px solid #222;
+  border-radius: 1rem;
+  padding: 2rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+
+.serviceCard::before {
+  content: "";
+  height: 4px;
+  width: 50px;
+  background: #facc15;
+  position: absolute;
+  top: 0;
+  left: 20px;
+  border-radius: 2px;
+}
+
+.serviceCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.5);
+}
+
+.icon {
+  font-size: 2.3rem;
+  margin-bottom: 1rem;
+  color: #facc15;
+}
+
+.serviceCard h3 {
+  font-size: clamp(1.1rem, 2vw, 1.3rem);
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 0.8rem;
+}
+
+.serviceCard p {
+  font-size: clamp(0.9rem, 1.8vw, 1rem);
+  color: #bbb;
+  line-height: 1.5;
+}
+
+/* --- Guiding Principles Section --- */
+.guidingGrid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+  .guidingGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.guidingCard {
+  background: #1a1a1a;
+  border: 1px solid #222;
+  border-radius: 1rem;
+  padding: 2rem;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.guidingCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.5);
+}
+
+.guidingIcon {
+  font-size: 2.5rem;
+  color: #facc15;
+  margin-bottom: 1rem;
+}
+
+.guidingCard h3 {
+  color: #fff;
+  margin-bottom: 0.5rem;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.guidingCard p {
+  color: #bbb;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* --- Projects Section --- */
+.projects {
+  background: #111115;
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+.projects h2 {
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  margin-bottom: 3rem;
+  color: #facc15;
+}
+
+.projectGrid {
+  display: grid;
+  gap: 1.8rem;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+  .projectGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.projectCard {
+  background: #1a1a1a;
+  border-radius: 1rem;
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.projectCard img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.projectCard:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+}
+
+.projectCard p {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  padding: 0.8rem;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  font-weight: 600;
+  font-size: clamp(0.9rem, 2vw, 1rem);
+}
+
+/* --- CTA Section --- */
+.cta {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: linear-gradient(135deg, #1a1a1a, #111);
+  border-radius: 1rem;
+  margin: 4rem 2rem;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+}
+
+.cta h2 {
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #facc15;
+}
+
+.cta p {
+  margin: 1rem 0 2rem;
+  color: #cbd5e1;
+  font-size: clamp(1rem, 2.2vw, 1.2rem);
+}
+
+/* --- Responsive --- */
+@media (max-width: 1024px) {
+  .hero {
+    flex-direction: column-reverse;
+    text-align: center;
+    min-height: auto;
+  }
+  .heroContent {
+    padding: 2.5rem 1.5rem;
+  }
+  .heroImage {
+    margin-top: 1.5rem;
+    height: 260px;
+    border-left: none;
+    border-top: 1px solid #222;
+  }
+}
+
+@media (max-width: 768px) {
+  .heroContent h1 {
+    font-size: 2rem;
+  }
+  .heroContent p {
+    font-size: 1rem;
+  }
+  .cta {
+    margin: 2rem 1rem;
+    padding: 3rem 1.5rem;
+  }
+}

@@ -1,0 +1,158 @@
+.services {
+  background: #0f1114;
+  color: #fff;
+  padding: 3rem 1rem; /* reduced padding for smaller screens */
+  font-family: "Poppins", sans-serif;
+}
+
+/* Header */
+.header {
+  text-align: center;
+  margin-bottom: 2rem; /* reduced margin */
+}
+
+.header h2 {
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  font-weight: 700;
+  margin-bottom: 0.8rem;
+  color: #facc15;
+}
+
+.header p {
+  max-width: 700px;
+  margin: 0 auto;
+  color: #aaa;
+  line-height: 1.5;
+  font-size: clamp(0.9rem, 2vw, 1rem);
+}
+
+.subheading {
+  font-size: clamp(1.4rem, 3vw, 1.8rem);
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #ffd633;
+}
+
+/* Grid */
+.grid {
+  display: grid;
+  gap: 1.5rem; /* reduced gap for mobile */
+  padding: 0 0.5rem; /* smaller side padding */
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 600px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+}
+
+/* Card */
+.card {
+  background: #1a1a1a;
+  border-radius: 1rem;
+  height: 100%;
+  border: 1px solid #222;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+
+.card::before {
+  content: "";
+  height: 3px; /* reduced height */
+  width: 40px;  /* reduced width */
+  background: #facc15;
+  position: absolute;
+  top: 0;
+  left: 15px;
+  border-radius: 2px;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.cardContent {
+  padding: 1.5rem; /* reduced padding */
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem; /* smaller gap */
+  height: 100%;
+}
+
+.cardContent h4 {
+  font-size: clamp(1.1rem, 2vw, 1.3rem);
+  font-weight: 600;
+  color: #fff;
+  margin-top: 0.3rem;
+}
+
+.cardContent p {
+  font-size: clamp(0.85rem, 1.5vw, 0.95rem);
+  color: #bbb;
+  line-height: 1.4;
+  margin-bottom: auto;
+}
+
+/* Icon */
+.icon {
+  font-size: clamp(2rem, 4vw, 2.5rem);
+  color: #facc15;
+}
+
+/* Button */
+.button {
+  margin-top: 0.8rem;
+  background: #facc15;
+  color: #111;
+  font-weight: 600;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.button:hover {
+  background: #ffd633;
+  transform: scale(1.05);
+}
+
+/* Entrance animation for Framer Motion */
+.motionCard {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+/* Responsive tweaks */
+@media (max-width: 600px) {
+  .header h2 {
+    font-size: 1.8rem;
+  }
+  .subheading {
+    font-size: 1.4rem;
+  }
+  .cardContent {
+    padding: 1rem;
+  }
+  .icon {
+    font-size: 2rem;
+  }
+  .button {
+    padding: 0.4rem 0.9rem;
+    font-size: 0.9rem;
+  }
+}

@@ -1,0 +1,224 @@
+.about {
+  background: #0f1114;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  line-height: 1.6;
+  padding: 0 1rem;
+  overflow-x: hidden;
+}
+
+/* Sections */
+.section,
+.sectionAlt {
+  padding: 3rem 1rem; /* reduced padding */
+  text-align: center;
+}
+
+.section {
+  background: #0f1114;
+  border-bottom: 1px solid rgba(250, 204, 21, 0.15);
+}
+
+.sectionAlt {
+  background: #14161a;
+}
+
+/* Headings */
+.heading {
+  font-size: clamp(1.6rem, 5vw, 2.3rem);
+  font-weight: 700;
+  margin-bottom: 1rem; /* reduced margin */
+  color: #facc15;
+}
+
+.text {
+  max-width: 800px;
+  margin: 0 auto 1rem;
+  color: #aaa;
+  font-size: clamp(0.9rem, 2vw, 1rem);
+  line-height: 1.5;
+}
+
+.highlight {
+  color: #ffd633;
+  font-weight: 600;
+}
+
+/* Columns (About details) */
+.columns {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem; /* reduced gap */
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .columns {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+}
+
+/* Principles Grid */
+.grid {
+  display: grid;
+  gap: 1rem; /* reduced gap */
+  margin-top: 1.5rem;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 600px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+}
+
+.card {
+  background: #1a1a1a;
+  border-radius: 1rem;
+  padding: 1.5rem; /* reduced padding */
+  border: 1px solid #222;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+
+.card::before {
+  content: "";
+  height: 3px; /* reduced height */
+  width: 40px;  /* reduced width */
+  background: #facc15;
+  position: absolute;
+  top: 0;
+  left: 15px;
+  border-radius: 2px;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+.card h3 {
+  margin-bottom: 0.6rem;
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  font-weight: 600;
+  color: #ffd633;
+}
+
+.card p {
+  color: #bbb;
+  font-size: clamp(0.85rem, 1.6vw, 0.95rem);
+  line-height: 1.4;
+}
+
+/* Team Section */
+.teamGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+@media (min-width: 600px) {
+  .teamGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .teamGrid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+  }
+}
+
+.teamCard {
+  background: #1a1a1a;
+  padding: 1rem; /* reduced padding */
+  border-radius: 1rem;
+  text-align: center;
+  border: 1px solid #222;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.teamCard:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 18px rgba(250, 204, 21, 0.2);
+}
+
+.teamImg {
+  width: 80px; /* smaller on small screens */
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 0.8rem;
+  object-fit: cover;
+  border: 3px solid #facc15;
+}
+
+.teamCard h3 {
+  margin: 0.5rem 0;
+  font-size: clamp(0.95rem, 2vw, 1.1rem);
+  font-weight: 600;
+  color: #fff;
+}
+
+.teamCard p {
+  font-size: clamp(0.8rem, 1.6vw, 0.9rem);
+  color: #aaa;
+}
+
+/* Why Us List */
+.list {
+  list-style: none;
+  margin: 1.5rem auto 0;
+  padding: 0;
+  max-width: 700px;
+  text-align: left;
+}
+
+.list li {
+  margin-bottom: 0.8rem;
+  position: relative;
+  padding-left: 1.5rem;
+  font-size: clamp(0.9rem, 1.8vw, 0.95rem);
+  color: #ddd;
+}
+
+.list li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: #facc15;
+  font-weight: bold;
+}
+
+/* Small devices */
+@media (max-width: 600px) {
+  .heading {
+    font-size: 1.6rem;
+  }
+  .text {
+    font-size: 0.9rem;
+  }
+  .card {
+    padding: 1rem;
+  }
+  .teamImg {
+    width: 70px;
+    height: 70px;
+  }
+  .list {
+    max-width: 100%;
+  }
+}
