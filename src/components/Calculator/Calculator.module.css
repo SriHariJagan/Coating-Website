@@ -1,0 +1,206 @@
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 1rem;
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+}
+
+.title {
+  font-size: clamp(1.4rem, 3vw, 1.8rem);
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #facc15;
+  text-align: center;
+}
+
+/* Cards */
+.form,
+.results {
+  background: #1a1a1a;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  border: 1px solid #222;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form:hover,
+.results:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(250, 204, 21, 0.15);
+}
+
+/* Input rows */
+.inputRow {
+  display: flex;
+  gap: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+.inputRow input,
+.inputRow select {
+  flex: 1;
+  padding: 0.7rem 0.9rem;
+  background: #0f1114;
+  border: 1px solid #333;
+  border-radius: 0.6rem;
+  font-size: 0.95rem;
+  color: #fff;
+  transition: all 0.25s ease;
+}
+
+.inputRow select {
+  flex: 0.4;
+}
+
+.inputRow input:focus,
+.inputRow select:focus {
+  border-color: #facc15;
+  box-shadow: 0 0 6px rgba(250, 204, 21, 0.3);
+  outline: none;
+}
+
+/* Radio + Blocks */
+.block {
+  margin-bottom: 1.2rem;
+  text-align: left;
+}
+
+.block label {
+  display: block;
+  margin-bottom: 0.4rem;
+  font-weight: 600;
+  color: #ffd633;
+}
+
+.radioGroup,
+.radioGroupInline {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.4rem;
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+.radioGroup {
+  flex-direction: column;
+}
+
+.radioGroupInline {
+  flex-wrap: wrap;
+}
+
+/* Button */
+.btn {
+  margin-top: 1rem;
+  width: 100%;
+  padding: 0.9rem;
+  font-size: 1.05rem;
+  font-weight: 600;
+  background: #facc15;
+  color: #0f1114;
+  border: none;
+  border-radius: 0.6rem;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.btn:hover {
+  background: #ffd633;
+  transform: translateY(-2px);
+}
+
+/* Results */
+.results {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.resultBox {
+  background: #0f1114;
+  padding: 1rem;
+  border: 1px solid #333;
+  border-radius: 0.6rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.95rem;
+  color: #ddd;
+}
+
+.resultBox label {
+  font-weight: 600;
+  color: #ffd633;
+}
+
+.resultBox span {
+  font-weight: 500;
+  color: #fff;
+}
+
+.totalBox {
+  border: 2px solid #d9534f;
+  background: rgba(217, 83, 79, 0.1);
+  font-weight: bold;
+  color: #ff6b6b;
+}
+
+/* Summary */
+.summaryBox {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background: #14161a;
+  border-left: 4px solid #facc15;
+  border-radius: 0.6rem;
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+.summaryBox h3 {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  color: #facc15;
+}
+
+.summaryBox p {
+  margin: 0.3rem 0;
+  line-height: 1.4;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .container {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 2rem 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .form,
+  .results {
+    padding: 1rem;
+  }
+
+  .title {
+    font-size: 1.2rem;
+  }
+
+  .btn {
+    font-size: 1rem;
+    padding: 0.8rem;
+  }
+
+  .inputRow {
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+
+  .inputRow select {
+    flex: 1;
+  }
+}

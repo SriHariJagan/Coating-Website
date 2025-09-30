@@ -219,21 +219,18 @@
 /* Responsive */
 @media (max-width: 1024px) {
   .grid {
-    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   }
   .cardWrapper {
-    width: 130px;
-    height: 130px;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1/1; /* keeps square */
   }
 }
 
 @media (max-width: 768px) {
   .grid {
-    grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
-  }
-  .cardWrapper {
-    width: 110px;
-    height: 110px;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
   }
   .searchInput {
     max-width: 180px;
@@ -242,26 +239,29 @@
 
 @media (max-width: 480px) {
   .grid {
-    grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+    grid-template-columns: repeat(3, 1fr); /* force exactly 3 per row */
+    gap: 0.8rem;
   }
   .cardWrapper {
-    width: 90px;
-    height: 90px;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1/1; /* makes perfect squares */
   }
   .title {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
   }
   .subtitle {
-    font-size: 0.85rem;
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
   }
   .filterBtn {
-    padding: 0.3rem 0.6rem;
+    padding: 0.3rem 0.5rem;
     font-size: 0.8rem;
   }
   .code {
-    font-size: 0.75rem;
+    font-size: 0.7rem;
   }
   .name {
-    font-size: 0.7rem;
+    font-size: 0.65rem;
   }
 }

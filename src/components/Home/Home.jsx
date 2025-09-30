@@ -1,7 +1,8 @@
 import React from "react";
 import styles from "./Home.module.css";
+import { Link } from "react-router-dom";
 
-export default function Home() {
+export default function Home({ openQuota }) {
   return (
     <div className={styles.home}>
       {/* Hero Section */}
@@ -11,10 +12,12 @@ export default function Home() {
             Premium Powder <br /> Coating Solutions
           </h1>
           <p>
-            Transform your surfaces with durable, high-quality, and 
+            Transform your surfaces with durable, high-quality, and
             environmentally friendly powder coatings for every industry.
           </p>
-          <button className={styles.ctaBtn}>Get a Quote</button>
+          <button className={styles.ctaBtn} onClick={() => openQuota()}>
+            Get a Quote
+          </button>
         </div>
         <div className={styles.heroImage}></div>
       </section>
@@ -46,15 +49,24 @@ export default function Home() {
         <h2>Our Recent Projects</h2>
         <div className={styles.projectGrid}>
           <div className={styles.projectCard}>
-            <img src="https://wallpapercave.com/wp/wp13427311.png" alt="Automotive" />
+            <img
+              src="https://wallpapercave.com/wp/wp13427311.png"
+              alt="Automotive"
+            />
             <p>Automotive Parts</p>
           </div>
           <div className={styles.projectCard}>
-            <img src="https://wallpapercave.com/wp/wp13427311.png" alt="Machinery" />
+            <img
+              src="https://wallpapercave.com/wp/wp13427311.png"
+              alt="Machinery"
+            />
             <p>Industrial Machinery</p>
           </div>
           <div className={styles.projectCard}>
-            <img src="https://wallpapercave.com/wp/wp13427311.png" alt="Furniture" />
+            <img
+              src="https://wallpapercave.com/wp/wp13427311.png"
+              alt="Furniture"
+            />
             <p>Outdoor Furniture</p>
           </div>
         </div>
@@ -64,10 +76,12 @@ export default function Home() {
       <section className={styles.cta}>
         <h2>Ready for a Superior Finish?</h2>
         <p>
-          Partner with Premium Powder Coating Solutions for your industry-specific 
-          and custom coating needs.
+          Partner with Premium Powder Coating Solutions for your
+          industry-specific and custom coating needs.
         </p>
-        <button className={styles.ctaBtn}>Contact Us Today</button>
+        <Link to="/contact">
+          <button className={styles.ctaBtn}>Contact Us Today</button>
+        </Link>
       </section>
     </div>
   );

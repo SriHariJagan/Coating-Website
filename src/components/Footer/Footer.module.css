@@ -12,7 +12,7 @@
 /* Container Grid */
 .footer .container {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr 1fr 1.5fr;
+  grid-template-columns: 2fr 1fr 1fr  1.5fr;
   gap: 40px;
   max-width: 1400px;
   margin: 0 auto;
@@ -59,7 +59,6 @@
 
 .footer .links li {
   margin-bottom: 10px;
-  cursor: pointer;
   color: #ccc;
   transition: all 0.3s ease;
 }
@@ -68,6 +67,20 @@
   color: #facc15;
   transform: translateX(2px);
 }
+
+
+.footer .links li a {
+  color: #ccc;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.footer .links li a:hover {
+  color: #facc15;
+  transform: translateX(2px);
+}
+
 
 /* CTA Section */
 .footer .cta h4 {
